@@ -14,6 +14,8 @@ def find(data):
 
 title_or_auth = input('what would you like to find?: ')
 
+print(hello)
+
 if title_or_auth == 'title':
     search = input('which title would you like to find?: ')
     r = requests.get("https://www.googleapis.com/books/v1/volumes?q={}&key=AIzaSyCbhIgJKBPeTDIhAF4MCY0VXOZoTX3IcAc".format(search))
