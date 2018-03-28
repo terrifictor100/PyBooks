@@ -1,32 +1,27 @@
 import requests
 
 def find(data):
-    book_data = r.json()
-    print(book_data['items'])
-    book = book_data['items']
+    results = []
+    book_data = data.json()
+    books = book_data['items']
 
-    for books in book:
-        volumeInfo = books.get('volumeInfo')
-        print(volumeInfo.get('title'))
-        print(volumeInfo.get('authors'))
-        print(volumeInfo.get('description'))
+    for book in books:
+        result = {}
+        volumeInfo = book.get('volumeInfo')
+        result["title"] = volumeInfo.get('title')
+        result["author"] = volumeInfo.get('authors')[0]
+        result["description"] = volumeInfo.get('description')
+        results.append(result)
 
+    return results
 
-title_or_auth = input('what would you like to find?: ')
+def search_books (title):
+    r = requests.get("https://www.googleapis.com/books/v1/volumes?q={}&key=AIzaSyCbhIgJKBPeTDIhAF4MCY0VXOZoTX3IcAc".format(title))
+    book_list = find(r)
 
-print(hello)
+    return book_list
 
-if title_or_auth == 'title':
-    search = input('which title would you like to find?: ')
-    r = requests.get("https://www.googleapis.com/books/v1/volumes?q={}&key=AIzaSyCbhIgJKBPeTDIhAF4MCY0VXOZoTX3IcAc".format(search))
-    find(r)
-else:
-    search = input('which author would you like to find?: ')
-    r = requests.get("https://www.googleapis.com/books/v1/volumes?q=inauthor:{}&key=AIzaSyCbhIgJKBPeTDIhAF4MCY0VXOZoTX3IcAc".format(search))
-    find(r)
-
-
-
+print(search_books("harry potter"))
 
 
 
