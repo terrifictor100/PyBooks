@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import requests
 
 
-app = Flask(__name__)
+app = Flask("PyBooks")
 
 
 @app.route('/search')
@@ -32,7 +32,7 @@ def search():
 
     print(search_books("harry potter"))
 
-    return render_template('searchResults.html', results=book_list)
+    return render_template('searchResults.html', results=results)
 
 @app.route('/')
 def home():
