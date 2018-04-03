@@ -11,8 +11,9 @@
 	</head>
 	<body>
 		<h1>SEARCH RESULTS</h1>
-
-		<p>{{  results  }}</p>
+	{% if results %}
+		<p>{{results}}</p>
+	{% endif %}
 	</body>
 <script type="text/python" src="API test.py"></script>
 </html>
