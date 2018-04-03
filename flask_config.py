@@ -13,7 +13,8 @@ def search_books():
     search_term = form_data["text"]
     r = requests.get("https://www.googleapis.com/books/v1/volumes?q={}&key=AIzaSyCbhIgJKBPeTDIhAF4MCY0VXOZoTX3IcAc".format(search_term))
     book_list = search(r)
-    return json.dumps(book_list)
+    results = json.dumps(book_list)
+    return render_template('searchResults.html', results=results)
 
 
 def search(data):

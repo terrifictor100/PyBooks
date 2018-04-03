@@ -1,19 +1,23 @@
 
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Search Results</title>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../static/css/result_style.css">
 	</head>
+
 	<body>
-		<h1>SEARCH RESULTS</h1>
-	{% if results %}
-		<p>{{results}}</p>
-	{% endif %}
+	<div class="logo"><a href="/"><i class="fab fa-python"></i></a></div>
+
+		<div class="container">
+			<h1>Search Results</h1>
+			{% if results %}
+				<p>{{results}}</p>
+			{% endif %}
+		</div>
+
 	</body>
-<script type="text/python" src="API test.py"></script>
+
+	<script type="text/python" src="API test.py"></script>
 </html>
