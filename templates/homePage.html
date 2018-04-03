@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="../static/css/style.css">
-    <title>Python Books</title>
-    <h1 id="title">Python Books</h1>
-</head>
-<body background="../static/images/books.jpg">
+    <head>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <title>PyBooks</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Python Books <i class="fab fa-python"></i></h1>
+            <div id="search_bar">
+                <form method="post" action="/search">
+                    <label for="search">Search for a book...</label>
+                    <input type="text" id="text" name="text"
+                    required="required">
+                    <input type="submit" value="Submit" id="submitbutton">
+                </form>
+            </div>
+        </div>
 
 
-<div id="search_bar">
-    <form method="post" action="/search">
-        <label for="search">Search for a book...</label>
-        <input type="text" id="text" name="text"
-        required="required">
-        <input type="submit" value="Submit" id="submitbutton">
-    </form>
-</div>
 
-<!-- <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Categories</button>
-    <div id="myDropdown" class="dropdown-content">
-        <a>Comedy</a>
-        <a>Romance</a>
-        <a>Thriller</a>
-    </div>
-    </div>
-</div> -->
+    <!-- <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Categories</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a>Comedy</a>
+            <a>Romance</a>
+            <a>Thriller</a>
+        </div>
+        </div>
+    </div> -->
 
-<script type="text/javascript" src="../static/js/dropdown.js"></script>
+    <script type="text/javascript" src="../static/js/dropdown.js"></script>
 
-</body>
+    </body>
 </html>
 
