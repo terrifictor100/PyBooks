@@ -26,7 +26,6 @@ def search(data):
         result = {}
         volumeInfo = book.get('volumeInfo')
         result["title"] = volumeInfo.get('title')
-        result["author"] = volumeInfo.get('authors')[0]
         result["description"] = volumeInfo.get('description')
         results.append(result)
 
