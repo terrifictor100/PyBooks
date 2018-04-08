@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -10,13 +9,17 @@
 	<body>
 	<div class="logo"><a href="/"><i class="fab fa-python"></i></a></div>
 
-		<div class="container">
-			<h1>Search Results</h1>
-			{% if results %}
-				<p>{{results}}</p>
-			{% endif %}
-		</div>
+	<h1>Search Results</h1>
 
+		{% for result in results %}
+	<div>
+		<tr>
+			<td class="searchResults">
+				Title
+			</td>
+		</tr>
+		{% endfor %}</div>
+	</div>
 	</body>
 
 	<script type="text/python" src="API test.py"></script>
