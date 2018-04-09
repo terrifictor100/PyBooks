@@ -2,6 +2,8 @@ import requests
 
 def find(data):
     results = []
+    titles = []
+    results = []
     book_data = data.json()
     books = book_data['items']
 
@@ -9,9 +11,10 @@ def find(data):
         result = {}
         volumeInfo = book.get('volumeInfo')
         result["title"] = volumeInfo.get('title')
-        result["author"] = volumeInfo.get('authors')[0]
-        result["description"] = volumeInfo.get('description')
+        #result["author"] = volumeInfo.get('authors')[0]
+        #result["description"] = volumeInfo.get('description')
         results.append(result)
+
 
     return results
 
