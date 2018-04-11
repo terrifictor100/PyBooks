@@ -3,12 +3,19 @@
 
 html, body {
     height: 100%;
+<<<<<<< HEAD
     background-image: url("../images/booksgif.gif");
     background-size: cover;
+=======
+    background-image: url("../images/books.jpg");
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+>>>>>>> b1b9c4bc2e5e55dce88dce1c1cfc88331c486e57
 }
 body {
     margin: 0;
 }
+
 .container {
     height: 100%;
     padding: 0;
@@ -23,7 +30,7 @@ body {
 
 
 h1 {
-    font-size: 4em;
+    font-size: 5em;
 }
 
 .fab {
@@ -32,8 +39,8 @@ h1 {
 
 
 #title {
-text-align: center;
-font-size: 100px;
+    text-align: center;
+    font-size: 100px;
 }
 .search-box-wrapper{
     display: inline-flex;
