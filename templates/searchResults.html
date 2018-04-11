@@ -15,24 +15,25 @@
         <h1>Search Results</h1>
 
         {% for result in results %}
-        {{ results }}
-        {% endfor %}
+
         <div id="content" style="background-color: #666666">
             <section class="mainContent">
-                <p class="title"><strong>Title</strong></p>
-                <p class="author">Author</p>
+                <p class="title"><strong>{{ result['title'] }}</strong></p>
+                <p class="author">{{ results['authors'] }}</p>
 
                     <div class="productRow">
                         <article class="productInfo">
-                            <div class="bookImage"><img alt="sample" src='../static/images/Placeholder.jpg'></div>
+                            <div class="bookImage"><img alt="sample" src ="{{ result['imageLinks'] }}"></div>
                         </article>
                         <article class="productInfo">
-                            <p class="description"><strong>Description</strong></p>
-                            <p class="clickHere">Find out more</p>
+                            <p class="description"><strong>{{ result['description']  }}</strong></p>
+                            <a href="{{ result['infoLink'] }}">Find out more</a>
                         </article>
                     </div>
             </section>
         </div>
+
+        {% endfor %}
 
 
 </div>

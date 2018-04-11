@@ -12,10 +12,9 @@ def search_books():
     form_data = request.form
     search_term = form_data["text"]
     r = requests.get("https://www.googleapis.com/books/v1/volumes?q={}&key=AIzaSyCbhIgJKBPeTDIhAF4MCY0VXOZoTX3IcAc".format(search_term))
-    book_list = search(r)
-    results = json.dumps(book_list)
-    #title = results['title']
+    results = search(r)
     return render_template('searchResults.html', results=results)
+
 
 
 def search(data):
@@ -27,7 +26,12 @@ def search(data):
         result = {}
         volumeInfo = book.get('volumeInfo')
         result["title"] = volumeInfo.get('title')
+        result['authors'] = volumeInfo.get('authors')
         result["description"] = volumeInfo.get('description')
+        imageLink = volumeInfo.get('imageLinks')
+        result["imageLinks"] = imageLink.get("thumbnail")
+        result["infoLink"] = volumeInfo.get("infoLink")
+
         results.append(result)
 
     return results
