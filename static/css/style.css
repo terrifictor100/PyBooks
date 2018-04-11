@@ -3,14 +3,10 @@
 
 html, body {
     height: 100%;
-<<<<<<< HEAD
+
     background-image: url("../images/booksgif.gif");
     background-size: cover;
-=======
-    background-image: url("../images/books.jpg");
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
->>>>>>> b1b9c4bc2e5e55dce88dce1c1cfc88331c486e57
+
 }
 body {
     margin: 0;

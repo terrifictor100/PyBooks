@@ -2,7 +2,6 @@ html, body {
             height: 100%;
             margin: 0;
             padding: 0;
-<<<<<<< HEAD
             display: block;
             width: 100%;
             height: 100%;
@@ -10,10 +9,8 @@ html, body {
             margin: 0;
             padding: 0;
             background: url('../images/booksgif.gif') no-repeat center center fixed;
-=======
+
             display: flex;
-            background: url('../images/books.jpg') no-repeat center center fixed;
->>>>>>> b1b9c4bc2e5e55dce88dce1c1cfc88331c486e57
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
