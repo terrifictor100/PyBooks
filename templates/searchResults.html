@@ -10,26 +10,29 @@
     <header>
     <div class="logo"><a href="/"><i class="fab fa-python"></i></a></div>
   </header>
+
     <div id="mainWrapper">
-	<h1>Search Results</h1>
-	{% for result in results %}
-  <div id="content" style="background-color: #666666">
-    <section class="mainContent">
-        <p class="title"><strong>Title</strong></p>
-            <p class="author">Author</p>
-      <div class="productRow">
-        <article class="productInfo">
-            <div class="bookImage"><img alt="sample" src='../static/images/Placeholder.jpg'></div>
-        </article>
-          <article class="productInfo">
-            <p class="description"><strong>Description</strong></p>
-            <p class="clickHere">Find out more</p>
-        </article>
-      </div>
-    </section>
+        <h1>Search Results</h1>
+
+        {% for result in results %}
+        {{ results }}
+        {% endfor %}
+        <div id="content" style="background-color: #666666">
+            <section class="mainContent">
+                <p class="title"><strong>Title</strong></p>
+                <p class="author">Author</p>
+
+                    <div class="productRow">
+                        <article class="productInfo">
+                            <div class="bookImage"><img alt="sample" src='../static/images/Placeholder.jpg'></div>
+                        </article>
+                        <article class="productInfo">
+                            <p class="description"><strong>Description</strong></p>
+                            <p class="clickHere">Find out more</p>
+                        </article>
+                    </div>
+            </section>
         </div>
-        <div>&nbsp;&nbsp;</div>
-	{% endfor %}
 
 
 </div>

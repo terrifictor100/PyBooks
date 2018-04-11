@@ -14,6 +14,7 @@ def search_books():
     r = requests.get("https://www.googleapis.com/books/v1/volumes?q={}&key=AIzaSyCbhIgJKBPeTDIhAF4MCY0VXOZoTX3IcAc".format(search_term))
     book_list = search(r)
     results = json.dumps(book_list)
+    #title = results['title']
     return render_template('searchResults.html', results=results)
 
 
