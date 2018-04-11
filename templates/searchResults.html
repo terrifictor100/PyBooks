@@ -2,35 +2,30 @@
 <html>
 	<head>
 		<title>Search Results</title>
-		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="../static/css/result_style.css">
+        <link rel="stylesheet" href="../static/css/result_style.css">
 	</head>
 
 	<body>
     <header>
-    <div class="logo"><a href="/"><i class="fab fa-python"></i></a></div>
-  </header>
+        <div class="logo"><a href="/"><i class="fab fa-python"></i></a></div>
+    </header>
 
     <div id="mainWrapper">
         <h1>Search Results</h1>
 
         {% for result in results %}
+        <div class ="container">
+            <h1 class="title">{{ result['title'] }}</h1>
+            <h3 class="author">{{ results['authors'] }}</h3>
 
-        <div id="content" style="background-color: #666666">
-            <section class="mainContent">
-                <p class="title"><strong>{{ result['title'] }}</strong></p>
-                <p class="author">{{ results['authors'] }}</p>
+            <div class="bookInfo">
+                <div class="bookImage"><img alt="sample" src ="{{ result['imageLinks'] }}"></div>
 
-                    <div class="productRow">
-                        <article class="productInfo">
-                            <div class="bookImage"><img alt="sample" src ="{{ result['imageLinks'] }}"></div>
-                        </article>
-                        <article class="productInfo">
-                            <p class="description"><strong>{{ result['description']  }}</strong></p>
+                <article class="productInfo">
+                    <p class="description"><strong>{{ result['description']  }}</strong></p>
                             <a href="{{ result['infoLink'] }}">Find out more</a>
                         </article>
                     </div>
-            </section>
         </div>
 
         {% endfor %}
@@ -40,6 +35,5 @@
 
 	</body>
 
-	<script type="text/python" src="API test.py"></script>
 </html>
 
