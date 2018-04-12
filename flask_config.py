@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request
 import requests
-import json
-
 
 
 app = Flask("PyBooks")
@@ -13,6 +11,7 @@ def search_books():
     search_term = form_data["text"]
     r = requests.get("https://www.googleapis.com/books/v1/volumes?q={}&key=AIzaSyCbhIgJKBPeTDIhAF4MCY0VXOZoTX3IcAc".format(search_term))
     results = search(r)
+    print(results)
     return render_template('searchResults.html', results=results)
 
 
@@ -25,8 +24,8 @@ def search(data):
     for book in books:
         result = {}
         volumeInfo = book.get('volumeInfo')
-        result["title"] = volumeInfo.get('title')
-        result['authors'] = volumeInfo.get('authors')
+        result["title"] = volumeInfo['title']
+        result['authors'] = volumeInfo['authors'][0]
         result["description"] = volumeInfo.get('description')
         imageLink = volumeInfo.get('imageLinks')
         result["imageLinks"] = imageLink.get("thumbnail")

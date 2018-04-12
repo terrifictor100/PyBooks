@@ -3,37 +3,29 @@
 	<head>
 		<title>Search Results</title>
         <link rel="stylesheet" href="../static/css/result_style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../static/js/script.js"></script>
 	</head>
 
 	<body>
-    <header>
-        <div class="logo"><a href="/"><i class="fab fa-python"></i></a></div>
-    </header>
+        <header>
+            <div class="logo"><a href="/"><i class="fab fa-python"></i></a></div>
+        </header>
+            <h1>Search Results</h1>
+            {% for result in results %}
 
-    <div id="mainWrapper">
-        <h1>Search Results</h1>
-
-        {% for result in results %}
-        <div class ="container">
-            <h1 class="title">{{ result['title'] }}</h1>
-            <h3 class="author">{{ results['authors'] }}</h3>
-
-            <div class="bookInfo">
+            <div class ="container">
                 <div class="bookImage"><img alt="sample" src ="{{ result['imageLinks'] }}"></div>
+                <div class="'container2">
+                    <div class ='title'> {{ result['title'] }}</div>
+                    <div class ='author'> {{ result['authors'] }}</div>
+                </div>
 
-                <article class="productInfo">
-                    <p class="description"><strong>{{ result['description']  }}</strong></p>
-                            <a href="{{ result['infoLink'] }}">Find out more</a>
-                        </article>
-                    </div>
-        </div>
+                <div class="description">{{ result['description']  }}</div>
+                <div class="FOM"><a href="{{ result['infoLink'] }}">Find out more</a></div>
+            </div>
 
-        {% endfor %}
-
-
-</div>
-
+            {% endfor %}
 	</body>
-
 </html>
 
