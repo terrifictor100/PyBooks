@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Search Results</title>
-        <link rel="stylesheet" href="../static/css/result_style.css">
+        <link rel="stylesheet" href="/static/css/result_style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="../static/js/script.js"></script>
 	</head>
@@ -11,18 +11,19 @@
         <header>
             <div class="logo"><a href="/"><i class="fab fa-python"></i></a></div>
         </header>
-            <h1>Search Results</h1>
+            <h1 class="text">Search Results</h1>
             {% for result in results %}
 
             <div class ="container">
-                <div class="bookImage"><img alt="sample" src ="{{ result['imageLinks'] }}"></div>
-                <div class="container2">
+                <div class ="bookImage"><img alt="sample" src ="{{ result['imageLinks'] }}"></div>
+                <div class ="container2">
                     <div class ='title'> {{ result['title'] }}</div>
                     <div class ='author'> {{ result['authors'] }}</div>
                 </div>
 
                 <div class="description">{{ result['description']  }}</div>
-                <div class="FOM"><a href="{{ result['infoLink'] }}">Find out more</a></div>
+                <div class ="container2"><b><a href="{{ result['infoLink'] }}">Find out what people think of this book</a></b></div>
+                <div class ="container2"><b><a href="{{ result['previewLink'] }}">Preview this book</a></b></div>
             </div>
 
             {% endfor %}

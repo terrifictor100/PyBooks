@@ -43,16 +43,18 @@ h1 {
 
 }
 
+.container2 {
+    width: 60%;
+    order: 0;
+    }
+
 .bookImage {
   width: 20%;
   order: -1;
 
 }
 
-.container2 {
-    width: 55%;
-    order: 0;
-    }
+
 
 .title {
     font-size: 3em;
@@ -62,12 +64,14 @@ h1 {
     font-size: 2em;
 }
 
-a {
+a:link {
    color: white;
    text-decoration: none;
+   font-style: italic;
+   text:decoration: none;
 }
 
-.FOM {
+a:hover {
+    text:decoration: underline;
     color: aqua;
-    font-style: italic;
 }

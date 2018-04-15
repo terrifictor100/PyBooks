@@ -30,6 +30,7 @@ def search(data):
         imageLink = volumeInfo.get('imageLinks')
         result["imageLinks"] = imageLink.get("thumbnail")
         result["infoLink"] = volumeInfo.get("infoLink")
+        result["previewLink"] = volumeInfo.get("previewLink")
 
         results.append(result)
 
