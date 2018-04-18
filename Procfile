@@ -1,1 +1,1 @@
-web: python flask_config.py $PORT
+web: gunicorn app:PyBooks2ls
