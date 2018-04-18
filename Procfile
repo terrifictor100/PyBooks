@@ -1,1 +1,1 @@
-web: gunicorn app:PyBooks2ls
+web: gunicorn app:PyBooks2
